@@ -1,4 +1,4 @@
-<project name="WordLengthCount" default="dist" basedir=".">
+<project name="TweetHashCount" default="dist" basedir=".">
 	<description>
         Sample MapReduce project build file
     </description>
@@ -38,7 +38,7 @@
 		<mkdir dir="${dist}" />
 
 		<!-- Put everything in ${build} into a jar file -->
-		<jar jarfile="${dist}/WordLengthCount.jar" basedir="${build}" />
+		<jar jarfile="${dist}/TweetHashCount.jar" basedir="${build}" />
 	</target>
 
 	<target name="clean" description="clean up">
