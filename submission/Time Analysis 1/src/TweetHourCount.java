@@ -8,23 +8,18 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class WordLengthCount {
+public class TweetHourCount {
 
   public static void runJob(String[] input, String output) throws Exception {
 
         Configuration conf = new Configuration();
 
     Job job = new Job(conf);
-    job.setJarByClass(WordLengthCount.class);
-    job.setMapperClass(WordLengthMapper.class);
+    job.setJarByClass(TweetHourCount.class);
+    job.setMapperClass(TweetHourMapper.class);
     job.setReducerClass(IntSumReducer.class);
-    
-    //Set number of reducers to 3
     job.setNumReduceTasks(3);
-    
-    //Add combiner class 
     job.setCombinerClass(IntSumReducer.class);
-    
     job.setMapOutputKeyClass(IntWritable.class);
     job.setMapOutputValueClass(IntWritable.class);
     Path outputPath = new Path(output);

@@ -9,7 +9,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 
 
-public class WordLengthMapper extends
+public class TweetHourMapper extends
         Mapper<Object, Text, IntWritable, IntWritable> {
 
     private final IntWritable one = new IntWritable(1);
