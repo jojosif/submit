@@ -1,4 +1,4 @@
-<project name="GetName" default="dist" basedir=".">
+<project name="Tweet3" default="dist" basedir=".">
 	<description>
         Sample MapReduce project build file
     </description>
@@ -37,7 +37,7 @@
 		<mkdir dir="${dist}" />
 
 		<!-- Put everything in ${build} into a jar file -->
-		<jar jarfile="${dist}/GetName.jar" basedir="${build}" />
+		<jar jarfile="${dist}/Tweet3.jar" basedir="${build}" />
 	</target>
 
 	<target name="clean" description="clean up">
